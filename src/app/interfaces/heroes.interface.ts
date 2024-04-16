@@ -5,4 +5,5 @@ export interface Heroe{
     aparicion: string;
     casa: string;
     id?: number;
+    _id?: string;
   };

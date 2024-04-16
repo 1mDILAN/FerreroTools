@@ -21,6 +21,8 @@ const routes: Routes = [
   {path: 'heroes-fotos', component: HeroesFotosComponent},
   {path: 'heroes-fotos/:id', component: HeroesFotosComponent},
   {path: 'nuevo-heroe', component: NuevoHeroeComponent},
+  {path: 'heroe', component: HeroeComponent},
+  {path: 'heroe/:id', component: HeroeComponent},
 
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 

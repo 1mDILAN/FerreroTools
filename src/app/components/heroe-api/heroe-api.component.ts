@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Heroe } from 'src/app/interfaces/heroes.interface';
-import { ApiService } from 'src/app/services/api.service';
 import { HeroesBDV1Service } from 'src/app/services/heroes-bdv1.service';
 import { HeroesService } from 'src/app/services/heroes.service';
 
@@ -12,7 +11,7 @@ import { HeroesService } from 'src/app/services/heroes.service';
 export class HeroeApiComponent {
 
   
-  heroes: Heroe[] = [];
+  heroes:Heroe[] = [];
   cargando: any;
 
   constructor(private dataBD: HeroesBDV1Service) {}

@@ -12,22 +12,35 @@ export class FotosApiComponent {
   heroeId: number | undefined;
 
   cargando: any;
+  activatedRoute: any;
+  fotosService: any;
 
   constructor(private dataBD: HeroesBDV1Service) {}
 
   ngOnInit() {
-    this.cargarHeroesV1();
+    this.cargarFotos();
+    // this.activatedRoute.params.subscribe((params: { [x: string]: string | number; }) => {
+    //   if (params['id']) {
+    //     this.heroeId = +params['id'];
+    //     // Filtrar las fotos basadas en el ID del héroe si se proporciona
+    //     this.fotos = this.cargarFotos.getFotos().filter((foto: { heroeId: number | undefined; }) => foto.heroeId === this.heroeId);
+    //   } else {
+    //     // Si no se proporciona un ID, cargar todas las fotos
+    //     this.fotos = this.fotosService.getFotos();
+    //   }
+    // });
+  
   }
 
-  cargarHeroesV1() {
+  cargarFotos() {
     this.cargando = true;
-    this.dataBD.getHeroes().subscribe(
+    this.dataBD.getFotos().subscribe(
       (resp: any) => {
         this.fotos = resp.resp;
         this.cargando = false;
       },
       (error: any) => {
-        console.error('Error al cargar héroes:', error);
+        console.error('Error al cargar heroes:', error);
         this.cargando = false;
       }
     );
