@@ -7,6 +7,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 import { HeroesFotosComponent } from './components/heroes-fotos/heroes-fotos.component';
+import { NuevoHeroeComponent } from './components/nuevo-heroe/nuevo-heroe.component';
+import { HeroeApiComponent } from './components/heroe-api/heroe-api.component';
 
 const routes: Routes = [
   { path: 'hogar', component: HomeComponent },
@@ -18,6 +20,7 @@ const routes: Routes = [
   { path: 'buscar/:termino', component: BuscadorComponent},
   {path: 'heroes-fotos', component: HeroesFotosComponent},
   {path: 'heroes-fotos/:id', component: HeroesFotosComponent},
+  {path: 'nuevo-heroe', component: NuevoHeroeComponent},
 
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 

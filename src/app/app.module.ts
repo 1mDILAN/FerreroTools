@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import {  HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +24,9 @@ import { AboutComponent } from './components/about/about.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HeroesFotosComponent } from './components/heroes-fotos/heroes-fotos.component';
+import { NuevoHeroeComponent } from './components/nuevo-heroe/nuevo-heroe.component';
+import { HeroeApiComponent } from './components/heroe-api/heroe-api.component';
+import { FotosApiComponent } from './components/fotos-api/fotos-api.component';
 
 
 @NgModule({
@@ -31,13 +41,20 @@ import { HeroesFotosComponent } from './components/heroes-fotos/heroes-fotos.com
     BuscadorComponent,
     AboutComponent,
     FilterPipe,
-    HeroesFotosComponent
+    HeroesFotosComponent,
+    NuevoHeroeComponent,
+    HeroeApiComponent,
+    FotosApiComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
