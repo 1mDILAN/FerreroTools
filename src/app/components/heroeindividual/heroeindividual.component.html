@@ -1,0 +1,15 @@
+<div class="card mb-2" style="max-width: 700px;" *ngIf="heroes.length > 0">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="heroes[0].img" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ heroes[0].nombre }}</h5>
+          <p class="card-text">{{ heroes[0].bio }}</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

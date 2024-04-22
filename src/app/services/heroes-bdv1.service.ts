@@ -36,6 +36,7 @@ export class HeroesBDV1Service {
       })
     );
   }
+  
   getHeroe(id: string): Observable<any> {
     const headers_object = new HttpHeaders().set('x-token', this.leerToken());
     const url = `${URL_SERVICIOS_MONGODB}/heroes/${id}`;
@@ -58,6 +59,14 @@ export class HeroesBDV1Service {
         return data;
       })
     );
+  }
+
+  getFoto(id: string):any{
+    var headers_object = new HttpHeaders().set('x-token', this.leerToken());
+
+    let url = `${URL_SERVICIOS_MONGODB}/multimedias/heroe/${id}`;
+
+    return this.http.get(url, { headers: headers_object });
   }
 
   

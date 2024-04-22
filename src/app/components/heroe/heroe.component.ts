@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HeroesService } from 'src/app/services/heroes.service';
 import { HeroesBDV1Service } from 'src/app/services/heroes-bdv1.service';
 import { Heroe } from 'src/app/interfaces/heroes.interface';
 
@@ -11,13 +12,18 @@ import { Heroe } from 'src/app/interfaces/heroes.interface';
 export class HeroeComponent implements OnInit {
   heroe: Heroe | null = null;
   cargando: boolean = false;
+  activatedRoute: any;
+  id: any;
+  heroes: Heroe[] = [];
 
   constructor(
     private route: ActivatedRoute,
-    private dataBD: HeroesBDV1Service
+    private dataBD: HeroesBDV1Service,
+    private heroesService: HeroesService
   ) {}
 
-  ngOnInit() {
+  ngOnInit() :void {
+
     // Obtener el ID del héroe de la URL
     this.route.paramMap.subscribe(params => {
       const idHeroe = params.get('id');

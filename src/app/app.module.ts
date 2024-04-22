@@ -27,6 +27,8 @@ import { HeroesFotosComponent } from './components/heroes-fotos/heroes-fotos.com
 import { NuevoHeroeComponent } from './components/nuevo-heroe/nuevo-heroe.component';
 import { HeroeApiComponent } from './components/heroe-api/heroe-api.component';
 import { FotosApiComponent } from './components/fotos-api/fotos-api.component';
+import { FotoHeroeApiComponent } from './components/foto-heroe-api/foto-heroe-api.component';
+import { HeroeindividualComponent } from './components/heroeindividual/heroeindividual.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { FotosApiComponent } from './components/fotos-api/fotos-api.component';
     HeroesFotosComponent,
     NuevoHeroeComponent,
     HeroeApiComponent,
-    FotosApiComponent
+    FotosApiComponent,
+    FotoHeroeApiComponent,
+    HeroeindividualComponent
     
   ],
   imports: [
