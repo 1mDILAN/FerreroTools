@@ -34,7 +34,7 @@ export class FotoHeroeApiComponent implements OnInit {
 
   cargarFotosPorId(id: string) {
     this.cargando = true;
-    this.dataBD.getFoto(id).subscribe(
+    this.dataBD.getFotoHeroe(id).subscribe(
       (resp: any) => {
         // Asigna la respuesta (un array de fotos) a `this.fotos`
         this.foto = resp.resp;

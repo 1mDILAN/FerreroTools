@@ -51,7 +51,7 @@ export class HeroesBDV1Service {
   {
     var headers_object = new HttpHeaders().set('x-token', this.leerToken());
 
-    let url = `${URL_SERVICIOS_MONGODB}/multimedias`;
+    let url = `${URL_SERVICIOS_MONGODB}/multimedias/`;
 
     return this.http.get(url).pipe(
       map((data: any) => {
@@ -61,10 +61,10 @@ export class HeroesBDV1Service {
     );
   }
 
-  getFoto(id: string):any{
+  getFotoHeroe(id: string):any{
     var headers_object = new HttpHeaders().set('x-token', this.leerToken());
 
-    let url = `${URL_SERVICIOS_MONGODB}/multimedias/heroe/${id}`;
+    let url = `${URL_SERVICIOS_MONGODB}/multimedias/${id}`;
 
     return this.http.get(url, { headers: headers_object });
   }
