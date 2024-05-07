@@ -20,6 +20,8 @@ export class NuevoHeroeComponent implements OnInit {
       id: ['', Validators.required],
       bio: ['', Validators.required],
       imagen: ['', Validators.required],
+      aparicion: ['', Validators.required],
+      casa: ['', Validators.required],
     })
   }
 
@@ -35,6 +37,8 @@ export class NuevoHeroeComponent implements OnInit {
       id: this.spiderForm.get('id')?.value,
       bio: this.spiderForm.get('bio')?.value,
       imagen: this.spiderForm.get('imagen')?.value,
+      aparicion: this.spiderForm.get('aparicion')?.value,
+      casa: this.spiderForm.get('casa')?.value,
     }
     this.toastr.success('El Spider-Man fue registrado', 'Spider Registrado!');
     console.log(SPIDER);

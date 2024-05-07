@@ -30,7 +30,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="id">ID:</label>
             <div class="col-sm-10">
-              <input  type="text" formControlName="id" class="form-control" id="id" name="id" placeholder="Ingrese ID"/>
+              <input type="text" formControlName="id" class="form-control" id="id" name="id" placeholder="Ingrese ID"/>
               <div class="text-danger"
               *ngIf="spiderForm.get('id')?.hasError('required') && spiderForm.get('id')?.touched">
                 <span>El Id es obligatorio<strong>*</strong></span>
@@ -50,7 +50,7 @@
           </div>  
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="bio">Descripción:</label>
+            <label class="control-label col-sm-2" for="bio">Biografia:</label>
             <div class="col-sm-10">
               <input  type="text" formControlName="bio" class="form-control" id="bio" name="bio" placeholder="Ingrese biografia corta"/>
               <div class="text-danger"
@@ -61,12 +61,34 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="customFile">Ingrese Imágen</label>
-            <input type="file" formControlName="imagen" class="form-control" id="customFile" />
+            <label class="form-label" for="imagen">Ingrese Imágen URL:</label>
+            <input type="text" formControlName="imagen" class="form-control" id="imagen" placeholder="https://..." />
             <div class="text-danger"
               *ngIf="spiderForm.get('imagen')?.hasError('required') && spiderForm.get('imagen')?.touched">
                 <span>La imagen es obligatoria<strong>*</strong></span>
               </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="aparicion">aparicion:</label>
+            <div class="col-sm-10">
+              <input  type="text" formControlName="aparicion" class="form-control" id="aparicion" name="aparicion" placeholder="Ingrese apariciongrafia corta"/>
+              <div class="text-danger"
+              *ngIf="spiderForm.get('aparicion')?.hasError('required') && spiderForm.get('aparicion')?.touched">
+                <span>La aparicion es obligatoria<strong>*</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="casa">Casa:</label>
+            <div class="col-sm-10">
+              <input  type="text" formControlName="casa" class="form-control" id="casa" name="casa" placeholder="Ingrese la casa "/>
+              <div class="text-danger"
+              *ngIf="spiderForm.get('casa')?.hasError('required') && spiderForm.get('casa')?.touched">
+                <span>La Casa es obligatoria<strong>*</strong></span>
+              </div>
+            </div>
           </div>
 
             <div class="form-group mt-2">

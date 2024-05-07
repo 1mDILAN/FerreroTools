@@ -12,6 +12,7 @@ import { HeroeApiComponent } from './components/heroe-api/heroe-api.component';
 import { FotosApiComponent } from './components/fotos-api/fotos-api.component';
 import { FotoHeroeApiComponent } from './components/foto-heroe-api/foto-heroe-api.component';
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
+import { HeroeEditComponent } from './components/heroe-edit/heroe-edit.component';
 
 const routes: Routes = [
   { path: 'hogar', component: HomeComponent },
@@ -23,12 +24,16 @@ const routes: Routes = [
   { path: 'buscar/:termino', component: BuscadorComponent},
   {path: 'heroes-fotos', component: HeroesFotosComponent},
   {path: 'heroes-fotos/:id', component: HeroesFotosComponent},
-  {path: 'nuevo-heroe', component: NuevoHeroeComponent},
+
+  //Crear o editar heroe desde el mismo formulario
+  //{path: 'heroeedit/:idheroe', component: NuevoHeroeComponent},
+  {path: 'heroeedit/:idheroe', component: HeroeEditComponent},
+
   {path: 'heroe', component: HeroeComponent},
   {path: 'heroe/:id', component: HeroeComponent},
   { path: 'fotos-api/:id', component: FotoHeroeApiComponent},
   { path: 'fotos-api', component: FotoHeroeApiComponent},
-  { path: 'heroes-list', component: HeroesListComponent},
+  { path: 'crud-heroes', component: HeroesListComponent},
 
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 
