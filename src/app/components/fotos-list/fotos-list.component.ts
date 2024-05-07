@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { Foto } from 'src/app/interfaces/fotos.interface';
 
+import { MongoDBService } from '../../services/mongo-db.service';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-fotos-list',
   templateUrl: './fotos-list.component.html',
