@@ -31,6 +31,7 @@ import { FotoHeroeApiComponent } from './components/foto-heroe-api/foto-heroe-ap
 import { HeroeindividualComponent } from './components/heroeindividual/heroeindividual.component';
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 import { HeroeEditComponent } from './components/heroe-edit/heroe-edit.component';
+import { FotosListComponent } from './components/fotos-list/fotos-list.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { HeroeEditComponent } from './components/heroe-edit/heroe-edit.component
     FotoHeroeApiComponent,
     HeroeindividualComponent,
     HeroesListComponent,
-    HeroeEditComponent
+    HeroeEditComponent,
+    FotosListComponent
     
   ],
   imports: [

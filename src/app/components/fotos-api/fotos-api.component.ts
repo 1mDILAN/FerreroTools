@@ -40,7 +40,7 @@ export class FotosApiComponent {
         this.cargando = false;
       },
       (error: any) => {
-        console.error('Error al cargar heroes:', error);
+        console.error('Error al cargar fotos:', error);
         this.cargando = false;
       }
     );

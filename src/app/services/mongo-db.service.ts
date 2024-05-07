@@ -107,7 +107,16 @@ export class MongoDBService {
   }
 
 
-  
+  getFotos(): any {
+    let url = `${URL_SERVICIOS_MONGODB}/multimedias`;
+
+    return this.http.get(url).pipe(
+      map((data) => {
+        console.log('DATOS', data);
+        return data;
+      })
+    );
+  }
 
 }
 

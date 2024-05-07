@@ -11,8 +11,9 @@ import Swal from 'sweetalert2';
   templateUrl: './heroes-list.component.html',
   styleUrls: ['./heroes-list.component.css']
 })
-export class HeroesListComponent {Heroes!: Heroe[];
-
+export class HeroesListComponent {
+  
+  Heroes!: Heroe[];
   unResultado!:any;
   unaAccion: string = 'Mensaje';
   unMensaje: string = '';

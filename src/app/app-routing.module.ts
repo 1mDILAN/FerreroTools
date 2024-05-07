@@ -13,6 +13,7 @@ import { FotosApiComponent } from './components/fotos-api/fotos-api.component';
 import { FotoHeroeApiComponent } from './components/foto-heroe-api/foto-heroe-api.component';
 import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 import { HeroeEditComponent } from './components/heroe-edit/heroe-edit.component';
+import { FotosListComponent } from './components/fotos-list/fotos-list.component';
 
 const routes: Routes = [
   { path: 'hogar', component: HomeComponent },
@@ -33,7 +34,11 @@ const routes: Routes = [
   {path: 'heroe/:id', component: HeroeComponent},
   { path: 'fotos-api/:id', component: FotoHeroeApiComponent},
   { path: 'fotos-api', component: FotoHeroeApiComponent},
+
+  //Listado de heroes
   { path: 'crud-heroes', component: HeroesListComponent},
+  { path: 'crud-fotos', component: FotosListComponent},
+
 
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 
