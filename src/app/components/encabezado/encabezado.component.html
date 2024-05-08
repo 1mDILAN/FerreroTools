@@ -1,11 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
   <div class="container">
-    <a class="navbar-brand" href="#">Heroes</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Ferreto Tools</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+      aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <div class="collapse navbar-collapse" id="navbarsExample07">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['home']">Home</a>
@@ -13,11 +14,6 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
         </li>
-
-        <!-- <li class="nav-item">
-          <a class="nav-link" [routerLink]="['heroes-fotos']">Gallery</a>
-        </li> -->
-
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['crud-heroes']">CRUD Heroes</a>
         </li>
@@ -26,16 +22,14 @@
           <a class="nav-link" [routerLink]="['crud-fotos']">CRUD Photos</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['about']">About</a>
-        </li>
-
-
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="filterPost">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
+      <form role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       </form>
+      <br>
+      <button class="btn btn-light ">
+        <a class="nav-link" [routerLink]="['about']">About</a>
+      </button>
     </div>
   </div>
 </nav>
